@@ -18,15 +18,16 @@ public class LineLengthTest {
     }
 
    @Test
-    public void lineWithLengthSix(){
-        Line line=new Line(4,8,1,3);
-        assertEquals(6.0,line.length(),0);
+    public void lineWithLengthEight(){
+        Line line=new Line(5,4,-1,-1);
+        assertEquals(8.0,line.length(),0);
     }
 
     @Test
     public void checkIfLineHasNegativeLength(){
        Line line=new Line(-4,-5,0,6);
         assertEquals(true,line.length()>0);
-
     }
+
+
 }

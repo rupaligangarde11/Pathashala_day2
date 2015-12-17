@@ -16,6 +16,6 @@ public class Line {
         int xDIff = x2 - x1;
         int yDiff = y2 - y1;
         distance=Math.sqrt((xDIff * xDIff) + (yDiff * yDiff));
-        return distance;
+        return Math.ceil(distance);
     }
 }
