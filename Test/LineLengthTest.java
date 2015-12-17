@@ -28,6 +28,13 @@ public class LineLengthTest {
        Line line=new Line(-4,-5,0,6);
         assertEquals(true,line.length()>0);
     }
-
-
+    @Test
+    public void checkCoordinatesOfTwoLinesAreSame(){
+        Line line1=new Line(4,5,8,7);
+        Line line2=new Line(4,5,8,7);
+        Line line3 = new Line(4,5,8,7);
+        Line line4 = new Line(8,7,4,5);
+        assertEquals(true,line1.isequal(line2));
+        assertEquals(true,line3.isequal(line4));
+    }
 }
