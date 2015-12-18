@@ -19,7 +19,7 @@ public class Line {
         return Math.ceil(distance);
     }
 
-    public boolean isequal(Line line2) {
+    public boolean isEqual(Line line2) {
         if(isXCoordinateEqual(this.x1,this.x2,line2.x1,line2.x2)&&isYCoordinateEqual(this.y1,this.y2,line2.y1,line2.y2))
             return true;
         return false;

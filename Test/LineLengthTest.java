@@ -1,6 +1,8 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LineLengthTest {
 
@@ -26,7 +28,7 @@ public class LineLengthTest {
     @Test
     public void checkIfLineHasNegativeLength(){
        Line line=new Line(-4,-5,0,6);
-        assertEquals(true,line.length()>0);
+        assertTrue(line.length() > 0);
     }
     @Test
     public void checkCoordinatesOfTwoLinesAreSame(){
@@ -34,7 +36,7 @@ public class LineLengthTest {
         Line line2=new Line(4,5,8,7);
         Line line3 = new Line(4,5,8,7);
         Line line4 = new Line(8,7,4,5);
-        assertEquals(true,line1.isequal(line2));
-        assertEquals(true,line3.isequal(line4));
+        assertTrue(line1.isEqual(line2));
+        assertTrue(line4.isEqual(line3));
     }
 }
