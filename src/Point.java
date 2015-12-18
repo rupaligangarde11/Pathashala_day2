@@ -7,12 +7,16 @@ public class Point {
         this.x=x;
         this.y =y;
     }
-    public double Xdiff(Point that)
-    {
-        return(this.x-that.x);
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Point that=(Point)obj;
+        return((this.x==that.x)&&(this.y==that.y));
     }
-    public double Ydiff(Point that)
-    {
-        return(this.y-that.y);
+    public double length(Point that) {
+        double distance;
+        distance=Math.sqrt(Math.pow((this.x-that.x),2) + Math.pow((this.y - that.y),2));
+        return Math.ceil(distance);
     }
 }
