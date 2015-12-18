@@ -1,4 +1,10 @@
+import java.awt.*;
+
 public class Line {
+    private  Point point2;
+    private  Point point1;
+
+
     private int x1;
     private int y1;
     private int x2;
@@ -11,10 +17,16 @@ public class Line {
         this.y2 = y2;
     }
 
+    public Line(Point point1, Point point2) {
+        this.point1=point1;
+        this.point2=point2;
+
+    }
+
     public double length() {
         double distance;
-        int xDIff = x2 - x1;
-        int yDiff = y2 - y1;
+        double xDIff = point1.Xdiff(point2);
+        double yDiff = point1.Ydiff(point2);
         distance=Math.sqrt((xDIff * xDIff) + (yDiff * yDiff));
         return Math.ceil(distance);
     }
